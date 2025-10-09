@@ -18,4 +18,26 @@ bepinex should be under
 ```
 ./Fallow/bepinex/plugins
 ```
-that is where mods go
+that is where mods go.<br>
+all mods should fall under there wether it be:<br>
+* code mods (just change mechanics)
+* model mods
+* sound mods
+# texture packs
+texture packs fall under <br>
+```
+./Fallow/textures
+```
+these will fall under (filename).zip<br>
+not:
+* rar
+* 7z
+* or any other filetype
+# settings
+settings should fall under<br>
+```
+./Fallow/configs/settingsconfigs/settings.config
+```
+these can also be found in game<br>
+(remember these will generate on first launch so PLEASE launch the game to <br>
+ main menu atleast once!)
