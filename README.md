@@ -17,9 +17,13 @@ all assets and textures will be available but do not *"steal"* them
 welcome!                      |
 ==============================|
 ------------------------------|
-how to install:               |
+**how to install**            |
 ------------------------------|
-BATCH:                        |
+**BATCH:**                    |
+under releases-               |
+select "installer.bat"        |
+run it                        |
+and follow instructions!      |                       
 ------------------------------|
 Itch.io                       |
 ------------------------------|
