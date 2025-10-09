@@ -20,8 +20,14 @@ Table Of contents:<br>
  <h1 id="1">how to use bepinex</h1>
  <span>how do you use bepinex?</span><br>
 <ul>
-    <li>1</li>
-    <li>2</li>
+    <li>step one: (you dont need to do this i did it for you!) [installation]</li>
+    <li>step two: ensure that under /bepinex/ there is a folder called plugins (if there isnt please make one)</li>
+    <li>step three: install/make any mods you want</li>
+    <li>step four: drop the dll of the  </li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
 </ul>  
  <br>
 <br>
