@@ -18,5 +18,38 @@ Table Of contents:<br>
 <br>
 <br>
  <h1 id="1">how to use bepinex</h1>
+ <span>how do you use bepinex?</span><br>
+<ul>
+    <li>1</li>
+    <li>2</li>
+</ul>  
+ <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
  <h1 id="2">how to inject the mods</h1>
+ <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
  <h1 id="3">how to  ensure mod stability/ engine-runtime stability</h1>
