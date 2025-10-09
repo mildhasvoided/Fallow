@@ -6,4 +6,4 @@ Table Of contents:<br>
 
 
 
- <h1 id="1" sstyle="margin-top:400px;display:block;">how to use bepinex</h1>
+ <h1 id="1" style="margin-top:400px;display:block;">how to use bepinex</h1>
