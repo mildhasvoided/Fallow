@@ -33,6 +33,6 @@ desired version!              |
 ------------------------------|
 ******************************|
 ```
-basic tutorials:
+basic tutorials:<br>
 [url to batch for tutorials]
 
