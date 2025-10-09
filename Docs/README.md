@@ -9,7 +9,7 @@ this mod api is simple and should support c# programming.
 it should allow the following:
 * code injection
 * model injection
-* soundtrack/audio injection
+* soundtrack/audio injection<br>
 -(bepinex is a unity injector)-
 speaking on bepinex
 
