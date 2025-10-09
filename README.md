@@ -1,2 +1,5 @@
 # Fallow
-A handcrafted voxel survival sandbox built in Unity.
+A unity fan project (probably not going to be released)
+
+Open source!
+but only for making mods and plugins (do not fork the game)
