@@ -34,5 +34,5 @@ desired version!              |
 ******************************|
 ```
 basic tutorials:
-<url to batch for tutorials>
+[url to batch for tutorials]
 
