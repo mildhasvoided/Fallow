@@ -23,7 +23,7 @@ all assets and textures will be available but do not *"steal"* them
 |under releases-               |
 |select "installer.bat"        |
 |run it                        |
-|and follow instructions!      |                       
+|and follow instructions!      |
 |------------------------------|
 |Itch.io:                      |
 |go to:                        |
