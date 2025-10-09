@@ -32,6 +32,7 @@ all assets and textures will be available but do not *"steal"* them
 |desired version!              |
 |------------------------------|
 |******************************|
+--------------------------------
 ```
 <!--# basic tutorials:<br>
 [url to batch for tutorials]
