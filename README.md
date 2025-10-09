@@ -20,10 +20,10 @@ all assets and textures will be available but do not *"steal"* them
 |HOW TO INSTALL                |
 |------------------------------|
 |BATCH:                        |
-|under releases-               |
+|under installers-             |
 |select "installer.bat"        |
-|run it                        |
-|and follow instructions!      |
+|                              |
+|                              |
 |------------------------------|
 |Itch.io:                      |
 |go to:                        |
