@@ -33,7 +33,7 @@ desired version!              |
 ------------------------------|
 ******************************|
 ```
-# basic tutorials:<br>
-# [url to batch for tutorials]
-# follow the batch for a tutorial on modding!
+<!-# basic tutorials:<br>
+[url to batch for tutorials]
+follow the batch for a tutorial on modding!-->
 
