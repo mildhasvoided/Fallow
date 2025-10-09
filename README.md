@@ -1,5 +1,5 @@
 # Fallow
-A unity fan project (probably not going to be released)
+A unity game 6000.2.6f2
 
 Open source!
 but only for making mods and plugins (do not fork the game)
