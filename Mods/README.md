@@ -23,11 +23,9 @@ Table Of contents:<br>
     <li>step one: (you dont need to do this i did it for you!) [installation]</li>
     <li>step two: ensure that under /bepinex/ there is a folder called plugins (if there isnt please make one)</li>
     <li>step three: install/make any mods you want</li>
-    <li>step four: drop the dll of the  </li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>step four: drop the dll of the mod into fallow/bepinex/plugins [it should generate its compiled folder once the game is ran]  </li>
+    <li>step five: open the game and go to the mod list confirm the mod is loaded </li>
+    <li>step six:have fun!</li>
 </ul>  
  <br>
 <br>
