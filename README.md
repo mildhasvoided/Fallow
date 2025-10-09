@@ -17,7 +17,7 @@ all assets and textures will be available but do not *"steal"* them
 welcome!                      |
 ==============================|
 ------------------------------|
-<b>how to install<b>          |
+HOW TO INSTALL                |
 ------------------------------|
 BATCH:                        |
 under releases-               |
