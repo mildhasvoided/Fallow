@@ -13,25 +13,25 @@ all assets and textures will be available but do not *"steal"* them
 
 * i would only consider it stealing if you use the asset (and pretend its yours) other than that, the asset can be used in mods,plugins.
 ```
-==============================|
-welcome!                      |
-==============================|
-------------------------------|
-HOW TO INSTALL                |
-------------------------------|
-BATCH:                        |
-under releases-               |
-select "installer.bat"        |
-run it                        |
-and follow instructions!      |                       
-------------------------------|
-Itch.io:                      |
-go to:                        |
-"url"                         |
-and install your              |
-desired version!              |
-------------------------------|
-******************************|
+|==============================|
+|welcome!                      |
+|==============================|
+|------------------------------|
+|HOW TO INSTALL                |
+|------------------------------|
+|BATCH:                        |
+|under releases-               |
+|select "installer.bat"        |
+|run it                        |
+|and follow instructions!      |                       
+|------------------------------|
+|Itch.io:                      |
+|go to:                        |
+|"url"                         |
+|and install your              |
+|desired version!              |
+|------------------------------|
+|******************************|
 ```
 <!--# basic tutorials:<br>
 [url to batch for tutorials]
