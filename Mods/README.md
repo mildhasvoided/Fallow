@@ -42,6 +42,7 @@ Table Of contents:<br>
 <br>
 <br>
  <h1 id="2">how to inject the mods</h1>
+    <p>once the dll is handed to bepinex it should handle this step for you!</p>
  <br>
 <br>
 <br>
@@ -57,3 +58,4 @@ Table Of contents:<br>
 <br>
 <br>
  <h1 id="3">how to  ensure mod stability/ engine-runtime stability</h1>
+ <p>ensure you DO NOT use enviroment or generation mods on pre-existing saves it will cause game instability!</p>
