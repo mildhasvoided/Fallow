@@ -17,9 +17,9 @@ all assets and textures will be available but do not *"steal"* them
 welcome!                      |
 ==============================|
 ------------------------------|
-<strong>how to install<strong>|
+<b>how to install<b>          |
 ------------------------------|
-**BATCH:**                    |
+BATCH:                        |
 under releases-               |
 select "installer.bat"        |
 run it                        |
