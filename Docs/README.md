@@ -10,8 +10,8 @@ it should allow the following:
 * code injection
 * model injection
 * soundtrack/audio injection<br>
--(bepinex is a unity injector)-
-speaking on bepinex
+-(bepinex is a unity injector)-<br>
+speaking of bepinex
 
 # bepinex
 bepinex should be under
