@@ -1,5 +1,8 @@
-this is an experimental branch.
-this branches only purpose is "special" software tests
-
-# there are no current experiments
-# return to <a href="https://github.com/mildhasvoided/Fallow"> main</a>
+this page is the public section of the repository
+dedicated to community made content
+* plugins
+* mods
+* textures/models
+<a href="mods">mods</a>
+<a href="plugins">plugins</a>
+<a href="models">models</a>
