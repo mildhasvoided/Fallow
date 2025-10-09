@@ -47,7 +47,7 @@ if "%choice%"=="4" goto main
 
 :modlist
 cls
-start "" "example.com"
+start "" "https://github.com/mildhasvoided/Fallow/tree/main/Mods/endorsed%20(community)"
 timeout /t 6 >nul
 goto exit
 
