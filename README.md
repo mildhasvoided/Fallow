@@ -25,7 +25,11 @@ select "installer.bat"        |
 run it                        |
 and follow instructions!      |                       
 ------------------------------|
-Itch.io                       |
+Itch.io:                      |
+go to:                        |
+"url"                         |
+and install your              |
+desired version!              |
 ------------------------------|
 GITHUB:                       |
 ******************************|
