@@ -40,4 +40,6 @@ settings should fall under<br>
 ```
 these can also be found in game<br>
 (remember these will generate on first launch so PLEASE launch the game to <br>
- main menu atleast once!)
+ main menu atleast once!)<br>
+ for any confusion or bug reports please refer to issues.<br>
+ for any bugs with modding system please put those in issues aswell.<br>
