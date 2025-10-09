@@ -11,7 +11,6 @@ timeout /t 6 >nul
 goto select
 
 :select
-cls
 echo What would you like?
 echo.
 echo 1. Install game
