@@ -1,4 +1,5 @@
 # Fallow Documentation
+<a href="README.md">return to index</a><br>
 hello there modder!!!
 I will try to keep this short and simple!
 that is how i want it to be anyway.
