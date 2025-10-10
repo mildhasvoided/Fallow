@@ -1,0 +1,60 @@
+{
+  "name": "Controlled Uploads",
+  "target": "branch",
+  "enforcement": "active",
+  "bypass_actors": [],
+  "conditions": {
+    "ref_name": {
+      "include": ["uploads"],
+      "exclude": []
+    },
+    "repository": {
+      "id": ["<REPO_ID>"]
+    }
+  },
+  "rules": {
+    "pull_request": {
+      "required_approving_review_count": 1,
+      "dismiss_stale_reviews_on_push": true,
+      "require_code_owner_review": true,
+      "require_last_push_approval": false,
+      "bypass_pull_request_allowances": {
+        "users": [],
+        "teams": []
+      }
+    },
+    "required_status_checks": {
+      "strict": true,
+      "checks": [
+        {
+          "context": "Copilot Code Review"
+        },
+        {
+          "context": "Malware Scan"
+        }
+      ]
+    },
+    "required_signatures": {
+      "enabled": true
+    },
+    "required_linear_history": {
+      "enabled": true
+    },
+    "required_conversation_resolution": {
+      "enabled": true
+    },
+    "allow_force_pushes": {
+      "enabled": false
+    },
+    "allow_deletions": {
+      "enabled": false
+    }
+  },
+  "parameters": {
+    "upload_limits": {
+      "max_uploads_per_day": 4,
+      "enforce_limit": true,
+      "violation_action": "report_and_block"
+    }
+  }
+}

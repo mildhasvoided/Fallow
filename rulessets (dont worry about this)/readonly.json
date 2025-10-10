@@ -1,0 +1,50 @@
+{
+  "name": "Read-Only Access",
+  "target": "branch",
+  "enforcement": "active",
+  "bypass_actors": [],
+  "conditions": {
+    "ref_name": {
+      "include": ["main"],
+      "exclude": []
+    }
+  },
+  "rules": {
+    "pull_request": {
+      "required_approving_review_count": 0,
+      "dismiss_stale_reviews_on_push": true,
+      "require_code_owner_review": true,
+      "require_last_push_approval": true,
+      "bypass_pull_request_allowances": {
+        "users": [],
+        "teams": []
+      }
+    },
+    "required_status_checks": {
+      "strict": true,
+      "checks": []
+    },
+    "required_signatures": {
+      "enabled": true
+    },
+    "required_linear_history": {
+      "enabled": true
+    },
+    "required_deployments": {
+      "enabled": false,
+      "required_contexts": []
+    },
+    "required_conversation_resolution": {
+      "enabled": true
+    },
+    "lock_branch": {
+      "enabled": true
+    },
+    "allow_force_pushes": {
+      "enabled": false
+    },
+    "allow_deletions": {
+      "enabled": false
+    }
+  }
+}
