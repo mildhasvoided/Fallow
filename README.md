@@ -10,6 +10,6 @@ for formality please follow this structure:
 ------------|-----(contents)
 ```
 <h1>INDEX DIRECTORY</h1>
-<a href="./models/README.md">mods</a>
-<a href="./plugins/README.md">plugins</a>
-<a href="./README.mdmodels">models</a>
+<a href="models">mods</a>
+<a href="plugins">plugins</a>
+<a href="models">models</a>
