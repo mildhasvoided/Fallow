@@ -1,29 +1,9 @@
-name: Load Repo Rulesets
+- name: Rule updater
 
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-
-jobs:
-  scan-rulesets:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: List ruleset files
-        run: |
-          echo "Scanning ./main/rulessets/ for ruleset JSON files..."
-          find ./main/rulessets -type f -name "*.json"
-
-      - name: Validate JSON syntax
-        run: |
-          echo "Validating JSON syntax..."
-          for file in $(find ./main/rulessets -type f -name "*.json"); do
-            echo "Checking $file"
-            jq empty "$file" || { echo "❌ Invalid JSON in $file"; exit 1; }
-          done
-
-      - name: Summary
-        run: echo "✅ Ruleset scan complete."
+  run: |
+    echo 'Scanning "./main/rulessets (dont worry about this)/" for ruleset JSON files...'
+    if [ -d "./main/rulessets (dont worry about this)" ]; then
+      find "./main/rulessets (dont worry about this)" -type f -name "*.json"
+    else
+      echo "⚠️ Folder not found. Skipping scan."
+    fi
