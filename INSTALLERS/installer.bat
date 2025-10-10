@@ -27,7 +27,7 @@ if "%choice%"=="4" exit
 goto select
 
 :repo
-start "" "https://github.com/mildhasvoided/Fallow"
+start  "https://github.com/mildhasvoided/Fallow"
 timeout /t 3 >nul
 goto exit
 :help
