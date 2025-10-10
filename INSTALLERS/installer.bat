@@ -46,13 +46,13 @@ if "%choice%"=="4" goto main
 
 :modlist
 cls
-start "" "https://github.com/mildhasvoided/Fallow/tree/main/Mods/endorsed%20(community)"
+start  "https://github.com/mildhasvoided/Fallow/tree/main/Mods/endorsed%20(community)"
 timeout /t 6 >nul
 goto exit
 
 
 :guide
-start "" "https://github.com/mildhasvoided/Fallow/blob/main/Mods/README.md"
+start  "https://github.com/mildhasvoided/Fallow/blob/main/Mods/README.md"
 goto exit
 
 
