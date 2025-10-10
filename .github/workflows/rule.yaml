@@ -1,9 +1,65 @@
-- name: Rule updater
+name: Update Rulesets Index
 
-  run: |
-    echo 'Scanning "./main/rulessets (dont worry about this)/" for ruleset JSON files...'
-    if [ -d "./main/rulessets (dont worry about this)" ]; then
-      find "./main/rulessets (dont worry about this)" -type f -name "*.json"
-    else
-      echo "⚠️ Folder not found. Skipping scan."
-    fi
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  update-rulesets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Scan for ruleset JSON files
+        id: scan
+        run: |
+          echo '📁 Scanning "./main/rulessets (dont worry about this)/" for ruleset JSON files...'
+          RULESET_DIR="./main/rulessets (dont worry about this)"
+          if [ -d "$RULESET_DIR" ]; then
+            echo "✅ Folder found."
+            FILES=$(find "$RULESET_DIR" -type f -name "*.json")
+            echo "$FILES" > ruleset_files.txt
+          else
+            echo "⚠️ Folder not found. Skipping scan."
+            echo "" > ruleset_files.txt
+          fi
+
+      - name: Validate JSON syntax
+        run: |
+          echo "🧪 Validating JSON syntax..."
+          while IFS= read -r file; do
+            if [ -n "$file" ]; then
+              echo "🔍 Checking $file"
+              jq empty "$file" || { echo "❌ Invalid JSON in $file"; exit 1; }
+            fi
+          done < ruleset_files.txt
+
+      - name: Generate ruleset index
+        run: |
+          echo "🧾 Generating ruleset-index.json..."
+          echo "[" > ruleset-index.json
+          FIRST=true
+          while IFS= read -r file; do
+            if [ -n "$file" ]; then
+              NAME=$(basename "$file")
+              if [ "$FIRST" = true ]; then
+                FIRST=false
+              else
+                echo "," >> ruleset-index.json
+              fi
+              echo "  \"$NAME\"" >> ruleset-index.json
+            fi
+          done < ruleset_files.txt
+          echo "]" >> ruleset-index.json
+          echo "✅ ruleset-index.json created."
+
+      - name: Commit updated index
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add ruleset-index.json
+          git commit -m "Update ruleset index [auto]"
+          git push
+        continue-on-error: true
