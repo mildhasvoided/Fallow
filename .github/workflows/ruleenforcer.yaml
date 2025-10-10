@@ -1,4 +1,4 @@
-name: Enforce Repo Rules
+name: Owner-Only Enforcement
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  enforce-rules:
+  enforce-owner-only:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -21,42 +21,18 @@ jobs:
           echo "branch=${GITHUB_REF##*/}" >> $GITHUB_OUTPUT
 
       - name: Detect file changes
-        id: changes
         run: |
           git diff --name-status HEAD~1 HEAD > changes.txt
           cat changes.txt
 
-      - name: Enforce rules
+      - name: Enforce owner-only access
         run: |
           ACTOR="${{ steps.meta.outputs.actor }}"
-          BRANCH="${{ steps.meta.outputs.branch }}"
           echo "👤 Actor: $ACTOR"
-          echo "🌿 Branch: $BRANCH"
 
-          if [[ "$ACTOR" == "mildhasvoided" ]]; then
-            echo "✅ mildhasvoided is exempt. Skipping enforcement."
-            exit 0
-          fi
-
-          if [[ "$BRANCH" == "main" || "$BRANCH" == "experimental" ]]; then
-            echo "❌ $ACTOR is not allowed to edit $BRANCH"
+          if [[ "$ACTOR" != "mildhasvoided" ]]; then
+            echo "❌ Unauthorized modification attempt by $ACTOR"
             exit 1
           fi
 
-          while IFS=$'\t' read -r status file; do
-            if [[ "$status" == "D" ]]; then
-              echo "❌ $ACTOR tried to delete $file — not allowed"
-              exit 1
-            fi
-
-            if [[ "$BRANCH" == "modlist" ]]; then
-              if [[ "$status" == "M" || "$status" == "A" ]]; then
-                if [[ "$file" != "$ACTOR/"* ]]; then
-                  echo "❌ $ACTOR can only modify files in their own folder on modlist"
-                  exit 1
-                fi
-              fi
-            fi
-          done < changes.txt
-
-          echo "✅ All checks passed"
+          echo "✅ Authorized push by $ACTOR"
