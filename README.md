@@ -9,7 +9,3 @@ for formality please follow this structure:
 ----|-------author
 ------------|-----(contents)
 ```
-<h1>INDEX DIRECTORY</h1>
-<a href="models">mods</a>
-<a href="plugins">plugins</a>
-<a href="models">models</a>
