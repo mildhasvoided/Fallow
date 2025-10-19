@@ -1,13 +1,15 @@
 @echo off
 
 :main
-timeout /t 1 >nul
+cls
+powershell -Command "Start-Sleep -Milliseconds 1"
 echo ====================
-timeout /t 1 >nul
+powershell -Command "Start-Sleep -Milliseconds 1"
 echo       Fallow
-timeout /t 1 >nul
+powershell -Command "Start-Sleep -Milliseconds 1"
 echo ====================
-timeout /t 2 >nul
+
+powershell -Command "Start-Sleep -Milliseconds 6"
 goto select
 
 :select
@@ -17,15 +19,10 @@ echo 1. Install game
 echo 2. modding help
 echo 3. Exit
 echo.
-set /p choice=Enter your choice (1-3): 
-
-if "%choice%"=="1" goto install
-if "%choice%"=="2" goto help
-if "%choice%"=="3" goto exit
-echo Invalid choice. Please try again.
-echo.
-pause
-goto select
+choice /c 123 /n /m "Enter your choice (1-3): "
+if errorlevel 3 goto exit
+if errorlevel 2 goto help
+if errorlevel 1 goto install
 
 :help
 cls
@@ -35,25 +32,25 @@ echo 2. modlist
 echo 3. go to repo
 echo 4. Never mind
 echo.
-set /p helpchoice=Enter your choice (1-4): 
-if "%helpchoice%"=="1" goto guide
-if "%helpchoice%"=="2" goto modlist
-if "%helpchoice%"=="3" goto repo
-if "%helpchoice%"=="4" goto main
-goto help
+choice /c 1234 /n /m "Enter your choice (1-4): "
+if errorlevel 4 goto main
+if errorlevel 3 goto repo
+if errorlevel 2 goto modlist
+if errorlevel 1 goto guide
 
 :modlist
 cls
-start "" "https://github.com/mildhasvoided/Fallow/tree/main/Mods/endorsed%20(community)"
+start "" "https://github.com/mildhasvoided/Fallow/tree/main/Mods"
 timeout /t 1 >nul
-goto exit
-
+goto help
 
 :guide
-start  "https://github.com/mildhasvoided/Fallow/blob/main/Mods/README.md"
-goto exit
+start "" "https://github.com/mildhasvoided/Fallow/tree/main/Mods#1"
+goto help
 
-
+:repo
+start "" "https://github.com/mildhasvoided/Fallow"
+goto main
 
 :install
 cls
@@ -64,9 +61,9 @@ timeout /t 1 >nul
 echo ====================
 start "" "https://example.com"
 timeout /t 1 >nul
-powershell -Command "Expand-Archive -Path 'Fallow.zip' -DestinationPath 'Fallow' -Force"
+powershell -Command "Expand-Archive -Path 'C:\Downloads\Fallow.zip' -DestinationPath 'C:\Downloads\Fallow' -Force"
 timeout /t 2 >nul
-start "" "Fallow"
+start "" "C:\Downloads\Fallow"
 timeout /t 3 >nul
 goto exit
 
@@ -78,6 +75,5 @@ cls
 echo.
 echo lay to rest
 echo.
-echo Press any key to exit...
-pause >nul
+timeout /t 2 >nul
 exit
